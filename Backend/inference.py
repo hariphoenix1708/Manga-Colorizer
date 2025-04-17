@@ -80,7 +80,7 @@ def main():
     parser.add_argument('--upscale_factor', choices=[2, 4], default=4, type=int, help='Upscale by x2 or x4')
     parser.add_argument('--denoise_sigma', default=25, type=int, help='How much noise to expect from the image')
 
-    parser.add_argument('--threads', default=1, type=int, help='Number of threads for parallel processing')
+    parser.add_argument('--threads', default=4, type=int, help='Number of threads for parallel processing')
 
     config = parser.parse_args()
     os.makedirs(config.output_path, exist_ok=True)
